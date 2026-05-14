@@ -1,0 +1,16 @@
+Balanced tree rules for pitchwheel_throttle_features:
+class_weight = balanced
+
+|--- Pwheel <= 5.006334
+|   |--- Throttle <= 0.495788
+|   |   |--- class: Critical
+|   |--- Throttle >  0.495788
+|   |   |--- class: Nominal
+|--- Pwheel >  5.006334
+|   |--- Throttle <= 0.402556
+|   |   |--- class: Critical
+|   |--- Throttle >  0.402556
+|   |   |--- Pwheel <= 10.728691
+|   |   |   |--- class: Caution
+|   |   |--- Pwheel >  10.728691
+|   |   |   |--- class: Caution

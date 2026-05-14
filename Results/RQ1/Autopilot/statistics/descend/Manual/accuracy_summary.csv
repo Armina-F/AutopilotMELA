@@ -1,0 +1,4 @@
+method,mode,total_sequences,correct_steps,total_steps,accuracy
+manual,pitchwheel_throttle,1,10,23,43.48
+manual,pitchwheel,1,10,23,43.48
+manual,throttle,1,11,23,47.83

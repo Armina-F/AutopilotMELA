@@ -1,0 +1,10 @@
+Balanced tree rules for throttle_only:
+class_weight = balanced
+
+|--- Throttle <= 0.481133
+|   |--- class: Caution
+|--- Throttle >  0.481133
+|   |--- Throttle <= 0.806384
+|   |   |--- class: Nominal
+|   |--- Throttle >  0.806384
+|   |   |--- class: Caution

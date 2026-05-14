@@ -1,0 +1,10 @@
+Balanced tree rules for pitchwheel_only:
+class_weight = balanced
+
+|--- Pwheel <= 4.137257
+|   |--- class: Nominal
+|--- Pwheel >  4.137257
+|   |--- Pwheel <= 19.958631
+|   |   |--- class: Caution
+|   |--- Pwheel >  19.958631
+|   |   |--- class: Nominal
