@@ -32,13 +32,13 @@ Our setup is configured as follows:
 In this repository, we publish our implementations and experimental data.
 
 ### Repository Structure
-- `Code`: Contains the MELA and Manual abstraction implementations, automata learning routines, decision-tree learning, evaluation scripts, and the NuSMV model-checking pipeline.
+- `Code`: Contains the MELA and Baseline abstraction implementations, automata learning routines, decision-tree learning, evaluation scripts, and the NuSMV model-checking pipeline.
 - `Data`: Includes input data, learning sets, and abstractions with labels for numeric sensor data and symbolic traces.
-- `Evalution`: Includes evaluation scripts and the test set used to answer RQ1.
-- `Figures`: Contains learned model figures (DOT-rendered PDFs for MELA, Manual, and PTA models) and accuracy boxplot figures.
+- `Evaluation`: Includes evaluation scripts and the test set used to answer RQ1.
+- `Figures`: Contains learned model figures (DOT-rendered PDFs for MELA, Baseline, and PTA models) and accuracy boxplot figures.
 - `Results`: This directory is organised into several subfolders, each containing specific types of results:
-  - `RQ1`: Includes the results of [test sequence](Evalution/Autopilot) execution on the learned models addressing research question 1, related to accuracy and model comparison.
-  - `RQ2`: Contains the outcomes of NuSMV model-checking for safety temporal properties, including [verification summaries](Results/RQ2/Autopilot/summaries).
-  - `LearnedModel`: Contains [state machines](Results/LearnedModel/Autopilot) learned by MELA and the Manual baseline.
+  - `RQ1`: Includes the results of [test sequence](Evaluation/Autopilot) execution on the learned models addressing research question 1, related to accuracy and model comparison.
+  - `RQ2`: Contains the outcomes of NuSMV model-checking for safety temporal properties. Verification summaries are available in [`Results/RQ2/Autopilot/summary/ag_not_target_gsm_pta_results.csv`](Results/RQ2/Autopilot/summary/ag_not_target_gsm_pta_results.csv).
+  - `LearnedModel`: Contains [state machines](Results/LearnedModel/Autopilot) learned by MELA and the Baseline.
 
 In the depicted state machines, system outputs are annotated on the states (Nominal, Caution, or Critical), and transitions are labelled by the abstracted sensor level ('L' for Low, 'M' for Medium, 'H' for High) for the pitchwheel and throttle signals.

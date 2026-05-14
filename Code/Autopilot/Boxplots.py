@@ -7,7 +7,7 @@ import pandas as pd
 
 
 learning_sets = ["ascend", "descend"]
-methods = ["MELA", "Manual"]
+methods = ["MELA", "Baseline"]
 configurations = ["pitchwheel", "throttle", "pitchwheel_throttle"]
 
 

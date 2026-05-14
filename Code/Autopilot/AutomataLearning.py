@@ -11,7 +11,7 @@ from aalpy.learning_algs.general_passive.GeneralizedStateMerging import (
 
 
 learning_sets = ["ascend", "descend"]
-methods = ["MELA", "Manual"]
+methods = ["MELA", "Baseline"]
 configurations = ["pitchwheel", "throttle", "pitchwheel_throttle"]
 
 

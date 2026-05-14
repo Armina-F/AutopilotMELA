@@ -50,6 +50,9 @@ def train_decision_tree(df: pd.DataFrame, features: list[str]) -> DecisionTreeCl
 
 
 def write_rules(learning_set: str, configuration: str) -> None:
+    # MELA only: decision-tree rules encode the ML-learned split boundaries for MELA.
+    # Baseline uses fixed manual thresholds (Pwheel: -10/10, Throttle: 0.333/0.667)
+    # defined directly in Baseline_Abstraction.py — no decision-tree rules are generated for it.
     abstraction_file_path = f"Data/Autopilot/Abstraction/MELA/{learning_set}/{configuration}.csv"
     rules_file_path = f"Data/Autopilot/DecisionTree/{learning_set}/{configuration}_rules.txt"
 

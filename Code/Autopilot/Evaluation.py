@@ -7,7 +7,7 @@ from aalpy.utils import load_automaton_from_file
 
 
 learning_sets = ["ascend", "descend"]
-methods = ["MELA", "Manual"]
+methods = ["MELA", "Baseline"]
 configurations = ["pitchwheel", "throttle", "pitchwheel_throttle"]
 
 
@@ -49,7 +49,7 @@ def predict_state(automaton, input_tokens: list[str]) -> str | None:
 
 
 def evaluate_trace(method: str, learning_set: str, configuration: str) -> None:
-    trace_file_path = f"Evalution/Autopilot/Trace/{method}/{learning_set}/{configuration}.csv"
+    trace_file_path = f"Evaluation/Autopilot/Trace/{method}/{learning_set}/{configuration}.csv"
     accuracy_file_path = (
         f"Results/RQ1/Autopilot/accuracy/{learning_set}/{method}/{configuration}_accuracy.csv"
     )

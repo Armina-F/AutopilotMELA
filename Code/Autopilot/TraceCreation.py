@@ -6,7 +6,7 @@ import pandas as pd
 
 
 learning_sets = ["ascend", "descend"]
-methods = ["MELA", "Manual"]
+methods = ["MELA", "Baseline"]
 configurations = ["pitchwheel", "throttle", "pitchwheel_throttle"]
 
 
@@ -33,18 +33,18 @@ def input_token(row: dict, configuration: str) -> str:
 
 
 def create_trace(method: str, learning_set: str, configuration: str) -> None:
-    learning_set_file_path = (
-        f"Data/Autopilot/Learning set/{method}/{learning_set}/{configuration}.csv"
+    abstraction_file_path = (
+        f"Data/Autopilot/Abstraction/{method}/{learning_set}/{configuration}.csv"
     )
     trace_csv_path = f"Data/Autopilot/Trace/{method}/{learning_set}/{configuration}.csv"
     trace_file_path = f"Data/Autopilot/Trace/{method}/{learning_set}/{configuration}.txt"
 
-    source_path = project_path(learning_set_file_path)
+    source_path = project_path(abstraction_file_path)
     output_csv_path = project_path(trace_csv_path)
     output_txt_path = project_path(trace_file_path)
 
     if not source_path.exists():
-        print(f"Skipping missing learning set: {learning_set_file_path}")
+        print(f"Skipping missing abstraction file: {abstraction_file_path}")
         return
 
     df = pd.read_csv(source_path)
